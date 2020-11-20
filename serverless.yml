@@ -28,5 +28,4 @@ package:
     - LICENSE
     - CHANGELOG.md
     - docs/**
-    - node_modules/**
     - local.js
