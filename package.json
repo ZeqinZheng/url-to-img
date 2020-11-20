@@ -9,6 +9,7 @@
   "scripts": {
     "start": "env-cmd nodemon --watch ./src -e js src/index.js",
     "test": "mocha --timeout 10000 && npm run lint",
+    "deploy": "serverless deploy",
     "lint": "eslint ."
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/alvarcarto/url-to-pdf-api#readme",
   "dependencies": {
+    "aws-serverless-express": "^3.3.8",
     "bluebird": "^3.5.0",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
@@ -45,6 +47,7 @@
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
+    "serverless": "^2.11.1",
     "supertest": "^3.0.0"
   }
 }
