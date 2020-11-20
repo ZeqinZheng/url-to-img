@@ -10,7 +10,22 @@ provider:
 
 functions:
  api:
-   handler: lambda.universal
+   handler: lambda.handler
    events:
      - http: ANY {proxy+}
      - http: ANY /
+
+
+package:
+  exclude:
+    - .vscode/**
+    - test/**
+    - package.json
+    - package-lock.json
+    - serverless.yml
+    - README.md
+    - Procfile
+    - LICENSE
+    - CHANGELOG.md
+    - docs/**
+    - node_modules/**
