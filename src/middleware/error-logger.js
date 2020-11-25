@@ -19,9 +19,9 @@ function createErrorLogger(_opts) {
     }
 
     if (opts.logStackTrace(status)) {
-      log(err, err.stack);
+      log(err, err.stack, 22);
     } else {
-      log(err.toString());
+      log(err.toString(), 24);
     }
 
     next(err);
@@ -35,7 +35,7 @@ function getLogLevel(status) {
 function logRequestDetails(logLevel, req) {
   logger[logLevel]('Request headers:', deepSupressLongStrings(req.headers));
   logger[logLevel]('Request parameters:', deepSupressLongStrings(req.params));
-  logger[logLevel]('Request body:', req.body);
+  logger[logLevel]('Request body:', req.body, "38");
 }
 
 function deepSupressLongStrings(obj) {
